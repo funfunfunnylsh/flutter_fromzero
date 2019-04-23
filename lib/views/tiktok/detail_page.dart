@@ -65,7 +65,7 @@ class _DetailState extends State<DetailPage> with TickerProviderStateMixin {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              "assets/detail.png",
+              "images/detail.png",
               fit: BoxFit.fitWidth,
               width: screenWidth,
               height: screenHeight,
@@ -77,7 +77,7 @@ class _DetailState extends State<DetailPage> with TickerProviderStateMixin {
                   child: GestureDetector(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/comment.png",
+                      "images/comment.png",
                       fit: BoxFit.fitHeight,
                     ),
                   )),

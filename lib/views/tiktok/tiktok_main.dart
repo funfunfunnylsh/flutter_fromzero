@@ -84,7 +84,7 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
       scale: 0.8 + 0.2 * offsetX / screenWidth < 0.8 ? 0.8 : 0.8 + 0.2 * offsetX / screenWidth,
       child: Container(
         child: Image.asset(
-          "assets/left.png",
+          "images/left.png",
           fit: BoxFit.fill,
         ),
         foregroundDecoration: BoxDecoration(
@@ -105,7 +105,7 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
         children: List(10)
             .map((_) => Container(
           child: Image.asset(
-            "assets/middle.png",
+            "images/middle.png",
             fit: BoxFit.fill,
           ),
         ))
@@ -128,7 +128,7 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
           child: Stack(
             children: <Widget>[
               Image.asset(
-                "assets/right.png",
+                "images/right.png",
                 fit: BoxFit.fill,
                 width: screenWidth,
               ),

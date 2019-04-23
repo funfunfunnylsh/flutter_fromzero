@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fromzero/views/tiktok/tiktok_main.dart';
+import 'package:flutter_fromzero/views/tiktok/tiktok_test.dart';
 import 'demo/Navigate.dart';
 import 'demo/IrregularBar.dart';
 import 'demo/FrostedDemo.dart';
@@ -121,7 +122,8 @@ class Page extends State<HomePage> {
       case 8:
         Navigator.of(widget.parentContext).push(new MaterialPageRoute(
           builder: (context) {
-            return new TikTokPage();
+//            return new TikTokPage();
+            return new TestTikTok();
           },
         ));
         break;
