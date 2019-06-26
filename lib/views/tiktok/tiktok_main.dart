@@ -79,7 +79,7 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
   ///
   /// 通过 [Transform.scale] 进行根据 [offsetX] 缩放
   /// 最小 0.8 最大为 1
-  Transform buildLeftPage(double screenWidth) {
+  Widget buildLeftPage(double screenWidth) {
     return Transform.scale(
       scale: 0.8 + 0.2 * offsetX / screenWidth < 0.8 ? 0.8 : 0.8 + 0.2 * offsetX / screenWidth,
       child: Container(
@@ -98,7 +98,7 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
   ///
   /// 通过 [Transform.translate] 根据 [offsetX] 进行偏移
   /// 水平偏移量为 [ offsetX] /5 产生视差效果
-  Transform buildMiddlePage() {
+  Widget buildMiddlePage() {
     return Transform.translate(
       offset: Offset(offsetX > 0 ? offsetX : offsetX / 5, 0),
       child: PageView(
