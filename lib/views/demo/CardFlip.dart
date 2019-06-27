@@ -123,7 +123,11 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
       ..addListener(() {
         setState(() {
           offsetX = animation.value;
-
+          if(animation.isCompleted){
+            urls.insert(0, urls[urls.length-1]);
+            urls.removeLast();
+            offsetX = 0;
+          }
         });
       });
     animationController.forward();
