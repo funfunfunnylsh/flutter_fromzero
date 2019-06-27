@@ -62,7 +62,9 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
             height: double.infinity,
             color: Colors.black,
             alignment: Alignment.center,
-            child: Stack(children: urls.map((url) => buildCard(urls.indexOf(url))).toList()),
+            child: Stack(
+                children:
+                    urls.map((url) => buildCard(urls.indexOf(url))).toList()),
           ),
         ),
       ),
@@ -73,14 +75,14 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
     return Positioned(
       top: 200,
       right: index * 20.0,
-      child: Container(
-        alignment: Alignment.bottomRight,
-        width: screenWidth,
-        height: 125,
-        color: Colors.transparent,
-        child: ClipRect(
-          child: Transform.translate(
-            offset: Offset(index == 4 ? offsetX : 0, 0),
+      child: Transform.translate(
+        offset: Offset(index == 4 ? offsetX : 0, 0),
+        child: Container(
+          alignment: Alignment.bottomRight,
+          width: screenWidth,
+          height: 125,
+          color: Colors.transparent,
+          child: ClipRect(
             child: ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               child: Image.network(
@@ -123,8 +125,8 @@ class _TikTokState extends State<TikTokPage> with TickerProviderStateMixin {
       ..addListener(() {
         setState(() {
           offsetX = animation.value;
-          if(animation.isCompleted){
-            urls.insert(0, urls[urls.length-1]);
+          if (animation.isCompleted) {
+            urls.insert(0, urls[urls.length - 1]);
             urls.removeLast();
             offsetX = 0;
           }
